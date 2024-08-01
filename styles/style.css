@@ -7,9 +7,9 @@
 }
 
 .header {
-    height: 293px;
-    display: flex;
-    padding: 92px 24px 96px 51px;
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    padding: 92px 24px 91px 51px;
     align-items: center;
     font-size: 18px;
 }
@@ -23,9 +23,9 @@
 }
 
 .header_link {
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-position: under;
     text-wrap: nowrap;
-    border-bottom: 1px solid black;
 }
 
 .header_links-list-item_no-bullit {
@@ -34,7 +34,7 @@
 
 .header_link_active {
     letter-spacing: normal;
-    border-bottom: none;
+    text-decoration: none;
 }
 
 .header_logo {
@@ -55,13 +55,12 @@
 
 .address a {
     letter-spacing: 0.01em;
-    text-decoration: none;
-    border-bottom: 1px solid black;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .cover {
     position: relative;
-    height: 757px;
     padding: 165px 50px 51px;
     background-image: url(../images/cover.jpg);
     background-repeat: no-repeat;
@@ -80,7 +79,6 @@
 
 .cover_title-word {
     display: block;
-    height: 100px;
     letter-spacing: 0.3em;
     line-height: 100%;
 }
@@ -137,13 +135,14 @@
     width: 256px;
     height: 51px;
     padding: 12px 32px 11px 31px;
+    font-family: Raleway, sans-serif;
     font-weight: 500;
     font-size: 22px;
     color: white;
     text-transform: uppercase;
     text-wrap: nowrap;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid currentColor;
 }
 
 .lots {
@@ -209,10 +208,8 @@
     line-height: 120%;
     text-transform: uppercase;
     color: white;
-}
-
-.underline {
-    border-bottom: 1px solid white;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .card_text {
@@ -234,14 +231,14 @@
     margin-top: 30px;
     margin-left: 40px;
     font-size: 20px;
-    text-decoration: none;
-    border-bottom: 1px solid black;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .about {
     padding: 35px 24px 180px 71px;
     display: grid;
-    grid-template-columns: 240px auto;
+    grid-template-columns: auto auto;
     column-gap: 72px;
     row-gap: 8px;
 }
@@ -251,6 +248,7 @@
     align-items: center;
     justify-content: center;
     height: 240px;
+    width: 240px;
     border-radius: 50%;
     background-color: black;
 }
@@ -269,15 +267,15 @@
 .about_text {
     grid-column-start: 2;
     display: grid;
-    grid-template-rows: 120px 168px;
     row-gap: 24px;
     font-size: 20px;
+    letter-spacing: 0.07px;
     line-height: 24px;
-    letter-spacing: 0.01em;
+    word-wrap: break-word;
 }
 
-.about_text-paragraph2 {
-    letter-spacing: normal;
+.about_text-paragraph-smaller {
+    width: 688px;
 }
 
 .footer {
@@ -295,12 +293,12 @@
 }
 
 .footer_menu-link {
-    text-decoration: none;
-    border-bottom: 1px solid black;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .footer_menu-link_active {
-    border-bottom: none;
+    text-decoration: none;
 }
 
 .footer_social-list {
